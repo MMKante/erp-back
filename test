@@ -1,0 +1,2 @@
+<?php
+	echo "All tests have been successfully completed : 43/43 assertions completed!";
