@@ -1,9 +1,9 @@
 pipeline {
     agent any 
     stages {
-        stage('Install dependencies') {
+        stage('Install dependencies & build') {
             steps {
-                sh 'composer install' 
+                sh 'composer install --no-dev' 
             }
         }
         stage('Test') {
