@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Deploy') {
             steps{
-                ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation:'ansible2',inventory:'hosts.txt',playbook:'ansible.yml'
+                sh 'ansible-playbook -i hosts.txt ansible.yml'
             }
         }
     }
