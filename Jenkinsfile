@@ -13,8 +13,7 @@ pipeline {
         }
         stage('Deploy') {
             steps{
-                sh 'who'
-                sh 'ansible-playbook -i hosts.txt ansible.yml'
+                sh 'sudo ansible-playbook -i hosts.txt ansible.yml'
             }
         }
     }
