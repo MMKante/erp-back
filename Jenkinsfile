@@ -6,6 +6,6 @@ node {
         sh 'php test'
     }
     stage('Deploy') {
-        sh 'ansible-playbook -i hosts.yml ansible.yml'
+        sh 'ansible-playbook -i hosts.txt ansible.yml'
     }
 }
