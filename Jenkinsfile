@@ -1,17 +1,11 @@
 node {
     stage('Install dependencies & build') {
-        steps {
-            sh 'composer install --no-dev' 
-        }
+        sh 'composer install --no-dev' 
     }
     stage('Test') {
-        steps {
-            sh 'php test'
-        }
+        sh 'php test'
     }
     stage('Deploy') {
-        steps{
-            sh 'ansible-playbook -i hosts.txt ansible.yml'
-        }
+        sh 'ansible-playbook -i hosts.txt ansible.yml'
     }
 }
