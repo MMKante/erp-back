@@ -6,6 +6,6 @@ node {
         sh 'php test'
     }
     stage('Deploy') {
-        sh 'sudo cp -r ./ /var/www/html/'
+        sh 'sudo cp -r ./ /var/www/html/ -S kmm'
     }
 }
