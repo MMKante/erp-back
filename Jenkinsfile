@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Deploy') {
             steps{
-                sh 'ansible-playbook -i /home/mmk/ansible/hosts.txt jenkins.yml'
+                sh 'sh /home/mmk/ansible/deploy.sh'
             }
         }
     }
