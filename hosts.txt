@@ -1,0 +1,4 @@
+[web_servers]
+
+linux2	ansible_host=192.168.10.11	ansible_usr=vboxuser \ ansible_ssh_private_key=/home/vboxuser/.ssh/id_rsa
+linux2	ansible_host=192.168.10.12	ansible_usr=vboxuser \ ansible_ssh_private_key=/home/vboxuser/.ssh/id_rsa
