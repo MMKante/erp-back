@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Deploy') {
             steps{
-                sh 'sh /home/mmk/ansible/deploy.sh'
+                sh 'sudo sh /home/mmk/ansible/deploy.sh'
             }
         }
     }
