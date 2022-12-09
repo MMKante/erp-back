@@ -1,10 +1,18 @@
 pipeline {
     agent any 
     stages {
-        stage('Stage 1') {
+        stage('Install dependencies') {
             steps {
-                echo 'Hello world!' 
+                sh 'composer install' 
             }
+        }
+        stage('Test') {
+            steps {
+                sh 'php test'
+            }
+        }
+        stage('Deploy') {
+            echo 'Deploying...'
         }
     }
 }
