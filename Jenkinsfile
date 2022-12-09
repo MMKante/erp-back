@@ -1,20 +1,17 @@
-pipeline {
-    agent any 
-    stages {
-        stage('Install dependencies & build') {
-            steps {
-                sh 'composer install --no-dev' 
-            }
+node {
+    stage('Install dependencies & build') {
+        steps {
+            sh 'composer install --no-dev' 
         }
-        stage('Test') {
-            steps {
-                sh 'php test'
-            }
+    }
+    stage('Test') {
+        steps {
+            sh 'php test'
         }
-        stage('Deploy') {
-            steps{
-                sh 'ansible-playbook -i hosts.txt ansible.yml'
-            }
+    }
+    stage('Deploy') {
+        steps{
+            sh 'ansible-playbook -i hosts.txt ansible.yml'
         }
     }
 }
