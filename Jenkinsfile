@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Deploy') {
             steps{
-                sh 'sh /home/mmk/ansible/run.sh'
+                ansiblePlaybook disableHostKeyChecking: true, installation:'ansible2',inventory:'hosts.txt',playbook:'ansible.yml'
             }
         }
     }
