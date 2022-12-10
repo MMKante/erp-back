@@ -12,10 +12,5 @@ pipeline {
                 sh 'php test'
             }
         }
-        stage('Deploy') {
-            steps {
-                sh 'ansible-playbook -i /home/mmk/ansible/hosts.txt ansible.yml'
-            }
-        }
     }
 }
