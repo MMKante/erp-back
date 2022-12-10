@@ -1,5 +1,5 @@
 node {
-    stage('Install dependencies & build') {
+    stage('Install prod dependencies') {
         sh 'composer install --no-dev' 
     }
     stage('Test') {
