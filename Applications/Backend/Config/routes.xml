@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <routes>
 	<route url="/user/login" module="User" action="login"/>
-	<route url="/user/change-username" module="User" action="changeUsername"/>
-	<route url="/user/change-password" module="User" action="changePassword"/>
+	<route url="/user/change-username" module="User" action="changeUsername" />
+	<route url="/user/change-password" module="User" action="changePassword" />
+	<route url="/user/department/list" module="User" action="departmentList" />
+	<route url="/user/add-supervisor" module="User" actions="addSupervisor" />
 	
 	<route url="/product/list" module="Product" action="list"/>
 	<route url="/test" module="Test" action="test"/>

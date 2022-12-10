@@ -75,4 +75,18 @@
 				$this->app()->httpResponse()->redirect404();
 			}
 		}
+		public function executeDepartmentList(\Library\HTTPRequest $request) {
+			$departments = $this->managers->getManagerOf('User')->departments();
+
+			$this->page->addVar('departments', $departments);
+		}
+		public function executeAddSupervisor(\Library\HTTPRequest $request) {
+			// $departments = $this->managers->getManagerOf('User')->addSupervisor();
+
+			$data = [
+				'verified' => true,
+				'message' => 'Superviseur créé avec succès !'
+			];
+			$this->page->addVar('departments', $departments);
+		}
 	}
