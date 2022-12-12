@@ -76,17 +76,30 @@
 			}
 		}
 		public function executeDepartmentList(\Library\HTTPRequest $request) {
-			$departments = $this->managers->getManagerOf('User')->departments();
+			$departments = $this->managers->getManagerOf('Department')->list();
 
 			$this->page->addVar('departments', $departments);
 		}
 		public function executeAddSupervisor(\Library\HTTPRequest $request) {
-			// $departments = $this->managers->getManagerOf('User')->addSupervisor();
+			$_POST = json_decode(file_get_contents('php://input'), true);
+			$this->managers->getManagerOf('User')->addSupervisor(
+				$request->postData('firstname'),
+				$request->postData('lastname'),
+				$request->postData('email'),
+				$request->postData('phone'),
+				$request->postData('department')
+			);
 
 			$data = [
 				'verified' => true,
-				'message' => 'Superviseur créé avec succès !'
+				'message' => 'Superviseur créé avec succès !',
+				'data' => $_POST
 			];
-			$this->page->addVar('departments', $departments);
+			$this->page->addVar('data', $data);
+		}
+		public function executeSupervisorsList(\Library\HTTPRequest $request) {
+			$supervisors = $this->managers->getManagerOf('User')->supervisors();
+
+			$this->page->addVar('supervisors', $supervisors);
 		}
 	}

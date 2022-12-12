@@ -21,8 +21,17 @@
             $query->bindValue(':password', hash('sha512', $password), \PDO::PARAM_STR);
             $query->execute();
         }
-        public function departments() {
-            $query = $this->dao->prepare("SELECT * FROM tbldepartment");
+        public function addSupervisor($firstname, $lastname, $email, $phone, $department) {
+            $query = $this->dao->prepare("INSERT INTO tblsupervisor (Firstname, Lastname, Email, Phone, RefDepartment) VALUES (:firstname, :lastname, :email, :phone, :department)");
+            $query->bindValue(':firstname', $firstname, \PDO::PARAM_STR);
+            $query->bindValue(':lastname', $lastname, \PDO::PARAM_STR);
+            $query->bindValue(':email', $email, \PDO::PARAM_STR);
+            $query->bindValue(':phone', $phone, \PDO::PARAM_STR);
+            $query->bindValue(':department', $department, \PDO::PARAM_INT);
+            $query->execute();
+        }
+        public function supervisors() {
+            $query = $this->dao->prepare("SELECT * FROM tblsupervisor INNER JOIN tbldepartment ON (tblsupervisor.RefDepartment = tbldepartment.RefDepartment)");
             $query->execute();
             return $query->fetchAll();
         }
