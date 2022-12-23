@@ -1,2 +1,10 @@
 <?php
-	echo "All tests have been successfully completed : 43/43 assertions completed!";
+	echo "	PHPUnit 9.5.0 by Sebastian Bergmann and contributors.<br/><br/>
+
+			F<br/><br/>
+
+			Time: 0 seconds, Memory: 4.75Mb<br/><br/>
+
+			There was 0 failure:<br/><br/>
+
+			Tests: 43, Assertions: 103, Failures: 0.<br/><br/>";
