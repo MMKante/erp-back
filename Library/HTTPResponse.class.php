@@ -12,14 +12,12 @@
 		}
 		public function redirect404() {
 			$this->page = new Page($this->app);
-			$this->page->addVar('title','Imossible d\'accéder à cette page !');
-			$this->page->setContentFile(__DIR__.'/../Config/Errors/404.html');
+			$this->page->addVar('title', '404 Error');
+			$this->page->setContentFile(__DIR__.'/../Errors/404.html');
 			$this->addHeader('HTTP/1.0 404 Not Found');
 			$this->send();
 		}
 		public function send() {
-			$this->addHeader('Content-Type: application/json');
-			$this->addHeader('Access-Control-Allow-Origin: *');
 			exit($this->page->getGeneratedPage());
 		}
 		public function setPage(Page $page) {

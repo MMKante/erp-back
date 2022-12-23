@@ -2,13 +2,13 @@
 	namespace Library;
 
 	class DBFactory {
-		public static function MySQLPDO() {
-			$db = new \PDO('mysql:host=localhost;dbname=erp;charset=utf8','root','');
+		public static function MySQLPDO() : \PDO {
+			$db = new \PDO('mysql:host=localhost;dbname=MYSQL_DATABASE;charset=utf8','MYSQL_USER','MYSQL_ROOT_PASSWORD');
 			$db->setAttribute(\PDO::ATTR_ERRMODE,\PDO::ERRMODE_EXCEPTION);
 
 			return $db;
 		}
 		public static function MySQLMySQLi() {
-			return new \MySQLi('localhost','erp','','root');
+			return new \MySQLi('localhost','root','','erp');
 		}
 	}

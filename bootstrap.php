@@ -1,5 +1,5 @@
 <?php
 	require('Library/autoload.php');
 
-	$app = new \Applications\Backend\BackendApplication;
+	$app = new \Applications\ERP\ERPApplication;
 	$app->run();

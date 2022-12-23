@@ -7,6 +7,9 @@
 		public function getAttribute($attr) {
 			return isset($_SESSION[$attr])? $_SESSION[$attr] : NULL;
 		}
+		public function setAttribute($key, $value) {
+			$_SESSION[$key] = $value;
+		}
 		public function getFlash() {
 			$flash = $_SESSION['flash'];
 			unset($_SESSION['flash']);

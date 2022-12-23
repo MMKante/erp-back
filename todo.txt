@@ -1,0 +1,13 @@
+Stock {} <<<
+
+Departement quality {} <<<
+
+Departement admin {} <<<
+
+Dashboard {} <<<
+
+DataTables styles {} <<<
+
+Traduction {} 
+
+Test {}

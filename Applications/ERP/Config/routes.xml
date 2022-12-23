@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+	<route url="/" module="Dashboard" action="index" />
+	<route url="/logout" module="User" action="logout" />
+	<route url="/supervisor/list" module="User" action="supervisorsList" />
+	<route url="/supervisor/add" module="User" action="addSupervisor" />
+	<route url="/supervisor/delete/([0-9]+)" module="User" action="deleteSupervisor" vars="id" />
+	<route url="/supervisor/update/([0-9]+)" module="User" action="updateSupervisor" vars="id" />
+	<route url="/supervisor/set-pass/([0-9]+)" module="User" action="setPassSupervisor" vars="id" />
+	<route url="/supervisor/status/([0-9]+)/([0-9]+)" module="User" action="setStatus" vars="id,status" />
+	<route url="/profile" module="User" action="profile" />
+	<route url="/profile/change-username" module="User" action="changeUsername" />
+	<route url="/profile/change-password" module="User" action="changePassword" />
+	<route url="/production/list" module="Production" action="list" />
+	<route url="/production/add" module="Production" action="add" />
+	<route url="/production/update/([0-9]+)" module="Production" action="update" vars="id" />
+	<route url="/production/delete/([0-9]+)" module="Production" action="delete" vars="id" />
+	<route url="/production/step/([0-9]+)" module="Production" action="stepList" vars="id" />
+	<route url="/production/step/add/([0-9]+)" module="Production" action="stepAdd" vars="id" />
+	<route url="/production/step/delete/([0-9]+)/([0-9]+)" module="Production" action="stepDelete" vars="order,id" />
+	<route url="/production/step/update/([0-9]+)/([0-9]+)" module="Production" action="stepUpdate" vars="order,id" />
+	<route url="/production/step/complete/([0-9]+)/([0-9]+)" module="Production" action="stepComplete" vars="order,id" />
+	<route url="/production/techmap/add/([0-9]+)/([0-9]+)" module="Production" action="techmapAdd" vars="order,id" />
+	<route url="/production/techmap/delete/([0-9]+)/([0-9]+)" module="Production" action="techmapDelete" vars="order,id" />
+
+	<route url="/product/list" module="Product" action="list" />
+	<route url="/product/add" module="Product" action="add" />
+	<route url="/product/update/([0-9]+)" module="Product" action="update" vars="id" />
+	<route url="/product/delete/([0-9]+)" module="Product" action="delete" vars="id" />
+	<route url="/material/list" module="Material" action="list" />
+	<route url="/material/add" module="Material" action="add" />
+	<route url="/material/update/([0-9]+)" module="Material" action="update" vars="id" />
+	<route url="/material/delete/([0-9]+)" module="Material" action="delete" vars="id" />	
+	<route url="/material-operation/list" module="MaterialOperation" action="list" />
+	<route url="/material-operation/add" module="MaterialOperation" action="add" />
+	<route url="/material-operation/update/([0-9]+)" module="MaterialOperation" action="update" vars="id" />
+	<route url="/material-operation/delete/([0-9]+)" module="MaterialOperation" action="delete" vars="id" />
+	<route url="/product-operation/list" module="ProductOperation" action="list" />
+	<route url="/product-operation/add" module="ProductOperation" action="add" />
+	<route url="/product-operation/update/([0-9]+)" module="ProductOperation" action="update" vars="id" />
+	<route url="/product-operation/delete/([0-9]+)" module="ProductOperation" action="delete" vars="id" />
+	<route url="/stock/product" module="Stock" action="product" />
+	<route url="/stock/material" module="Stock" action="material" />
+	<route url="/production/set-good/([0-9]+)" module="Production" action="setGood" vars="id" />
+	<route url="/production/set-bad/([0-9]+)" module="Production" action="setBad" vars="id" />
+</routes>
