@@ -1,0 +1,17 @@
+{
+    "name": "mmkante/erp-back",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Mmkante\\ErpBack\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MMKante",
+            "email": "kantemamadou13@gmail.com"
+        }
+    ],
+    "require": {}
+}
