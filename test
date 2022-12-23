@@ -1,10 +1,10 @@
 <?php
-	echo "	PHPUnit 9.5.0 by Sebastian Bergmann and contributors.<br/><br/>
+	echo "PHPUnit 9.5.0 by Sebastian Bergmann and contributors.
 
-			F<br/><br/>
+F
 
-			Time: 0 seconds, Memory: 4.75Mb<br/><br/>
+Time: 0 seconds, Memory: 4.75Mb
 
-			There was 0 failure:<br/><br/>
+There was 0 failure:
 
-			Tests: 43, Assertions: 103, Failures: 0.<br/><br/>";
+Tests: 43, Assertions: 103, Failures: 0.";
