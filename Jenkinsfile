@@ -15,6 +15,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'echo "Deploying..."'
+                sh 'cp -r /var/lib/jenkins/workspace/ERPFinal/* /home/mmk/docker/www/'
             }
         }
     }
