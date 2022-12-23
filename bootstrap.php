@@ -1,5 +1,9 @@
 <?php
-	require('Library/autoload.php');
+	try {
+		require('Library/autoload.php');
 
-	$app = new \Applications\ERP\ERPApplication;
-	$app->run();
+		$app = new \Applications\ERP\ERPApplication;
+		$app->run();
+	} catch (\Exception $e) {
+		die($e->getMessage());
+	}
