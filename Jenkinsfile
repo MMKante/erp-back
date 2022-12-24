@@ -16,6 +16,7 @@ pipeline {
             steps {
                 sh 'echo "Deploying..."'
                 sh 'zip -r erp_source.zip ./'
+                sh 'chmod 0777 erp_source.zip'
             }
         }
     }
