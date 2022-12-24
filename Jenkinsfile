@@ -15,7 +15,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'echo "Deploying..."'
-                sh 'pwd'
+                sh 'zip -r erp_source.zip /var/lib/jenkins/workspace/ERPFinal/'
             }
         }
     }
